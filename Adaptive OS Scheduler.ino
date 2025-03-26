@@ -6,7 +6,7 @@
 
 #define MAX_TASKS 5
 
-// Task structure
+
 typedef struct {
     int id;
     int period;
@@ -29,7 +29,6 @@ void *task_execution(void *arg) {
     return NULL;
 }
 
-// Adaptive Scheduler Function
 void adaptive_scheduler() {
     pthread_t threads[MAX_TASKS];
     for (int i = 0; i < num_tasks; i++) {
@@ -40,7 +39,6 @@ void adaptive_scheduler() {
     }
 }
 
-// Main function
 int main() {
     printf("Enter number of tasks: ");
     scanf("%d", &num_tasks);
